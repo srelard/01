@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spirit Design | Coaching & Naturheilkunde</title>
+
+    <!-- LOKALE EINBINDUNG (DSGVO-konform & Bootstrap 5) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+
+    
+    <!-- Google Fonts (Optional: Kannst du auch lokal einbinden) -->
+    <link href="https://googleapis.com" rel="stylesheet">
+
+    <style>
+        :root {
+            --spirit-gold: #c5a47e; /* Original Template Gold */
+            --spirit-dark: #333333; /* Original Template Grau */
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--spirit-dark);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .h2, .h4 {
+            color: var(--spirit-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hilfsklasse für dein Gold */
+        .text-gold { color: var(--spirit-gold) !important; }
+
+        /* Navbar Korrekturen für BS5 */
+        .navbar { background-color: var(--white); padding: 1rem 0; }
+        .nav-link { color: var(--spirit-dark) !important; font-weight: 500; text-transform: uppercase; }
+        .nav-link:hover { color: var(--spirit-gold) !important; }
+
+        /* Slider Fix für Mobilgeräte */
+        .carousel-item img { width: 100%; height: auto; }
+        @media (max-width: 768px) {
+            .carousel-caption {
+                position: relative; left: 0; top: 0; right: 0;
+                padding: 1.5rem; background: #fff; color: #333 !important; text-align: center;
+            }
+        }
+    </style>
+</head>
+
+
+    <!--========================================================
+                              HEADER
+    =========================================================-->
+   <body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <!-- Dein Logo-Platzhalter -->
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="Logo" height="40"> 
+        </a>
+        
+        <!-- Der Mobile-Button (Hamburger) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Die Menüpunkte -->
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#angebot">Angebot</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ueber-mich">Über mich</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+        <!-- Beginn des Sliders -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-top: 0px;">
+        <div class="carousel-inner">
+            
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="images/slider1.jpg" class="d-block w-100" alt="Slider 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <!-- Hier könntest du Text einfügen, falls gewünscht -->
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="images/slider2.jpg" class="d-block w-100" alt="Slider 2">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="images/slider3.jpg" class="d-block w-100" alt="Slider 3">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Steuerungspfeile -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Zurück</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Weiter</span>
+        </button>
+    </div>
+</header>
+
+
+    <!--========================================================
+                              CONTENT
+    =========================================================-->
+
+<main>
+    <section class="py-5" style="margin-top: 50px;"> <!-- Margin verringert, da BS5 effizienter stapelt -->
+        <div class="container">
+            <div class="row align-items-center"> <!-- Zentriert Inhalte vertikal, falls eine Spalte länger ist -->
+                
+                <!-- Linke Spalte -->
+                <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                    <h2 class="display-6 fw-bold">Herzlich Willkommen</h2>
+                    <h4 class="text-muted">Naturheilpraxis Düsseldorf</h4>
+                    <div class="my-4">
+                        <img src="images/goldenes-symbol.png" alt="goldenes-symbol" class="img-fluid">
+                    </div>
+                </div>
+                  
+                <!-- Rechte Spalte -->
+                <div class="col-md-8 col-sm-6">
+                    <div class="ps-md-4"> <!-- Ein wenig Abstand links auf Desktop -->
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                        </p>
+                        <p class="fw-bold">Stet clita kasd gubergren:</p>
+                        <p>
+                            No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                        </p>
+                        <p class="fw-bold">Stet clita kasd gubergren:</p>
+                        <p>
+                            No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                        </p>
+
+                        <a id="unternehmen"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- hier beginnt die Section Unternehmen -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row"> 
+                    <!-- Linke Spalte: Titel -->
+                    <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                        <h2 class="display-6">Leistungen 01</h2>
+                        <h4 class="text-muted mt-3">Von A bis Z alles in einer Hand!</h4>
+                    </div>
+                  
+                    <!-- Rechte Spalte: Bild und Text -->
+                    <div class="col-md-8 col-sm-6">
+                        <div class="mb-4">
+                            <!-- Hier könntest du eines deiner neuen Schmetterlings-Bilder einsetzen! -->
+                            <img src="images/03.jpg" alt="Leistungen" class="img-fluid rounded shadow-sm" />
+                        </div>
+
+                        <h4 class="mt-4">Lorem ipsum dolor sit amet</h4>
+                        
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2">
+                                <i class="bi bi-check2-circle text-success me-2"></i> Punkt 1:
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check2-circle text-success me-2"></i> Punkt 2:
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-check2-circle text-success me-2"></i> Punkt 3:
+                            </li>
+                        </ul>
+
+                        <h4 class="mt-5">Lorem ipsum dolor sit amet</h4>
+                        <div class="mt-3">
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+                            </p>
+                            <p class="fw-bold">Stet clita kasd gubergren:</p>
+                            <p>
+                                No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+                                               
+                             
+<!-- Fortsetzung Leistungen -->
+        <section class="py-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte (leer lassen für das Layout-Gleichgewicht) -->
+                    <div class="col-md-4 col-sm-6 d-none d-sm-block"></div>
+
+                    <!-- Rechte Spalte: Die Liste -->
+                    <div class="col-md-8 col-sm-6">
+                        <h4 class="mb-4">Lorem Ipsum:</h4>
+                        
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-01 - No sea takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-02 - No sea takimata</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-03 - No sea takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-04 - Sea takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-05 - No sea takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-06 - Takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-07 - No sea takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-08 - No sea takimata</li>
+                            
+                            <!-- Anker für Privatpersonen -->
+                            <a id="privatpersonen"></a>
+                            
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-09 - No sea takimata sanctus</li>
+                            <li class="mb-2"><i class="bi bi-dot text-violet"></i> Lorem-Ipsum-10 - Takimata sanctus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+                        
+                        
+                         <!-- hier endet die Section Unternehmen -->
+                         
+                        
+                        
+                        
+                        
+                         <!-- hier beginnt die Section Privatpersonen -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row">
+            <!-- Linke Spalte: Titel -->
+            <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                <h2 class="display-6">Leistungen 02</h2>
+                <h4 class="text-muted mt-3">Wir sind gerne für Sie da!</h4>
+            </div>
+                  
+            <!-- Rechte Spalte: Bild und Text -->
+            <div class="col-md-8 col-sm-6">
+                <div class="mb-4">
+                    <!-- Hier passt eines deiner helleren Schmetterlings-Motive perfekt rein -->
+                    <img src="images/04.jpg" alt="Leistungen Privatpersonen" class="img-fluid rounded shadow-sm" />
+                </div>
+                <div class="mt-4">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Abschluss Leistungen 02 -->
+        <section class="py-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte: Titel der Liste -->
+                    <div class="col-md-4 col-sm-6 mb-3 mb-md-0">
+                        <h4 class="text-muted">Lorem Ipsum:</h4>
+                    </div>
+
+                    <!-- Rechte Spalte: Die Liste -->
+                    <div class="col-md-8 col-sm-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-01 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-02 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-03 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-04 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-05 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-06 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-07 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-chevron-right text-violet mt-1 me-2" style="font-size: 0.8rem;"></i>
+                                <span>Punkt-08 - No sea takimata sanctus nonumy eirmod tempor invidunt</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                       <!-- Sektion Vorteile / Lorem Ipsum -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte -->
+                    <div class="col-md-4 col-sm-6 mb-3 mb-md-0">
+                        <h4 class="text-muted">Lorem Ipsum:</h4>
+                    </div>
+
+                    <!-- Rechte Spalte -->
+                    <div class="col-md-8 col-sm-6">
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        </p>
+                        
+                        <!-- Anker für Vorteile -->
+                        <a id="vorteile"></a>
+                        
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                        </p>
+                        <p class="mt-3">
+                            At vero eos et accusam et justo duo dolores et ea rebum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+                       
+                        
+               
+               
+               
+                        
+                         
+                         
+        <!-- Sektion Leistungen 03 -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte -->
+                    <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                        <h2 class="display-6">Leistungen 03</h2>
+                        <div class="mt-4">
+                            <h4 class="h5 fw-normal text-muted">Lorem Ipsum dolor sit amet:</h4>
+                            <h4 class="h5 fw-normal text-muted">Consetetur sadipscing elitr:</h4>
+                        </div>
+                    </div>
+
+                    <!-- Rechte Spalte -->
+                    <div class="col-md-8 col-sm-6">
+                        <div class="mb-4">
+                            <img src="images/05.jpg" alt="Vorteile" class="img-fluid rounded shadow-sm" />
+                        </div>
+                        
+                        <div class="mt-4">
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr.<br>
+                                Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+                            </p>
+
+                            <div class="mt-4">
+                                <p><span class="h6 fw-bold text-smaragd">Lorem Ipsum:</span><br />
+                                Odolor sit amet, consetetur sadipscing elitr.<br />
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                                
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.<br>
+                                Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                                
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.<br>
+                                Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                            </div>
+
+                            <div class="mt-4">
+                                <p><span class="h6 fw-bold text-smaragd">Loem Ipsum:</span><br />
+                                Dolor sit amet, consetetur sadipscing elitr.<br>
+                                Diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                                <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            </div>
+
+                            <div class="mt-4">
+                                <p><span class="h6 fw-bold text-smaragd">Lorem Ipsum:</span><br />
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            </div>
+
+                            <div class="mt-4">
+                                <p><span class="h6 fw-bold text-smaragd">Lorem Ipsum:</span><br />
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            </div>
+
+                            <!-- Anker für Preise -->
+                            <a id="preise"></a>
+
+                            <div class="mt-5 p-4 border-start border-4 border-violet bg-light">
+                                <h5 class="fw-bold">Sie haben noch Fragen?</h5>
+                                <p class="mb-0">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         <!-- Sektion Leistungen 04 / Kontakt-Intro -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte -->
+                    <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                        <h2 class="display-6">Leistungen 04</h2>
+                        <h4 class="text-muted mt-3">Lorem Ipsum dolor sit amet:</h4>
+                    </div>
+
+                    <!-- Rechte Spalte -->
+                    <div class="col-md-8 col-sm-6">
+                        <div class="mb-4">
+                            <img src="images/06.jpg" alt="Kontakt" class="img-fluid rounded shadow-sm" />
+                        </div>
+                        
+                        <div class="mt-4">
+                            <p>
+                                Lorem ipsum dolor sit amet <br /> 
+                                Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <p>At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                            
+                            <p class="mt-4">
+                                Sonsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br>
+                                At vero eos et accusam et justo duo dolores et ea rebum.
+                            </p>
+
+                            <!-- Anker für Über uns -->
+                            <a id="ueber-uns"></a>
+
+                            <div class="mt-5 p-4 rounded" style="background-color: rgba(126, 87, 194, 0.05); border: 1px solid rgba(126, 87, 194, 0.2);">
+                                <h5 class="fw-bold text-violet mb-3">Nehmen Sie mit uns Kontakt auf!</h5>
+                                <p class="mb-2">
+                                    Sie erreichen uns telefonisch unter:<br>
+                                    <strong>Festnetz:</strong> <a href="tel:012345678910" class="text-decoration-none text-dark">01234-5678 910</a><br>
+                                    <strong>Mobil:</strong> <a href="tel:013509876543" class="text-decoration-none text-dark">0135- 09876543</a>
+                                </p>
+                                <p class="mt-3 mb-0 fw-medium text-smaragd">
+                                    Wir freuen uns auf Ihren Anruf oder eine Nachricht von Ihnen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Sektion Über mich -->
+        <section class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte -->
+                    <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                        <h2 class="display-6">Über mich</h2>
+                        <h4 class="text-muted mt-3">Lorem ipsum dolor sit amet.</h4>
+                    </div>
+
+                    <!-- Rechte Spalte -->
+                    <div class="col-md-8 col-sm-6">
+                        <div class="mb-4">
+                            <!-- Hier kannst du ein Portrait oder eines deiner stimmungsvollen Naturbilder einfügen -->
+                            <img src="images/07.jpg" alt="Portrait" class="img-fluid rounded shadow-sm" />
+                        </div>
+                        
+                        <div class="mt-4">
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+                            <p class="mt-4">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+
+                            <!-- Anker für Referenzen -->
+                            <a id="referenzen"></a>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            </p>
+
+                            <div class="mt-5 p-4 rounded bg-light border-start border-4 border-smaragd">
+                                <p class="mb-2 fw-bold text-smaragd">
+                                    Unten ist noch Platz für Kundenstimmen oder weitere Angebote.
+                                </p>
+                                <p class="mb-0 italic">
+                                    Genau so, wie es am Besten zu dir passt...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         <!-- Sektion Kunden & Referenzen -->
+        <section class="py-5" style="background-color: rgba(0,0,0,0.02);">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Titel-Spalte -->
+                    <div class="col-md-3 col-sm-12">
+                        <h2 class="display-6">Meine Kunden</h2>
+                        <h4 class="text-muted">und Referenzen:</h4>
+                    </div>
+
+                    <!-- Referenz 1 -->
+                    <div class="col-md-3 col-sm-6">
+                        <article class="card h-100 border-0 bg-transparent">
+                            <img src="images/08.jpg" alt="Referenz 1" class="img-fluid rounded mb-3 shadow-sm" />
+                            <time class="text-muted small d-block mb-2" datetime="2025-03-01">01 / 03 / 2025</time>
+                            <p class="fst-italic mb-3">
+                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+                            </p>
+                            <p class="small fw-bold text-smaragd mt-auto">Lisa Lächel - Ravensburg</p>
+                        </article>
+                    </div>
+
+                    <!-- Referenz 2 -->
+                    <div class="col-md-3 col-sm-6">
+                        <article class="card h-100 border-0 bg-transparent">
+                            <img src="images/09.jpg" alt="Referenz 2" class="img-fluid rounded mb-3 shadow-sm" />
+                            <time class="text-muted small d-block mb-2" datetime="2025-07-03">03 / 07 / 2025</time>
+                            <p class="fst-italic mb-3">
+                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                            </p>
+                            <p class="small fw-bold text-smaragd mt-auto">Wanda Wunderbar - Friedrichshafen</p>
+                        </article>
+                    </div>
+
+                    <!-- Referenz 3 -->
+                    <div class="col-md-3 col-sm-12">
+                        <article class="card h-100 border-0 bg-transparent">
+                            <img src="images/10.jpg" alt="Referenz 3" class="img-fluid rounded mb-3 shadow-sm" />
+                            <time class="text-muted small d-block mb-2" datetime="2025-09-11">11 / 09 / 2025</time>
+                            <p class="fst-italic mb-3">
+                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                            </p>
+                            <p class="small fw-bold text-smaragd mt-auto">Hannah Herzlich - Überlingen</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+<!-- Fortsetzung Kunden & Referenzen -->
+        <section class="py-5" style="background-color: rgba(0,0,0,0.02); margin-top: -3rem;">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Leere Titel-Spalte für das Layout -->
+                    <div class="col-md-3 col-sm-12"></div>
+
+                    <!-- Referenz 4 -->
+                    <div class="col-md-3 col-sm-6">
+                        <article class="card h-100 border-0 bg-transparent">
+                            <img src="images/11.jpg" alt="Referenz 4" class="img-fluid rounded mb-3 shadow-sm" />
+                            <time class="text-muted small d-block mb-2" datetime="2025-10-01">01 / 10 / 2025</time>
+                            <p class="fst-italic mb-3">
+                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                            </p>
+                            <p class="small fw-bold text-smaragd mt-auto">Lina Lustig - Friedrichshafen</p>
+                        </article>
+                    </div>
+
+                    <!-- Referenz 5 -->
+                    <div class="col-md-3 col-sm-6">
+                        <article class="card h-100 border-0 bg-transparent">
+                            <img src="images/12.jpg" alt="Referenz 5" class="img-fluid rounded mb-3 shadow-sm" />
+                            <time class="text-muted small d-block mb-2" datetime="2025-11-03">03 / 11 / 2025</time>
+                            <p class="fst-italic mb-3">
+                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                            </p>
+                            <p class="small fw-bold text-smaragd mt-auto">Sandra Sonnenschein - Friedrichshafen</p>
+                        </article>
+                    </div>
+
+                    <!-- Referenz 6 -->
+                    <div class="col-md-3 col-sm-12">
+                        <article class="card h-100 border-0 bg-transparent">
+                            <img src="images/13.jpg" alt="Referenz 6" class="img-fluid rounded mb-3 shadow-sm" />
+                            <time class="text-muted small d-block mb-2" datetime="2025-06-09">09 / 06 / 2025</time>
+                            <p class="fst-italic mb-3">
+                                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore."
+                            </p>
+                            
+                            <!-- Anker für Kontakt -->
+                            <a id="kontakt"></a>
+                            
+                            <p class="small fw-bold text-smaragd mt-auto">Fione Fröhlich - Friedrichshafen</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+
+
+
+
+
+
+
+
+<!-- Kontakt-Sektion -->
+        <section class="py-5" style="background-color: rgba(126, 87, 194, 0.03);">
+            <div class="container">
+                <div class="row">
+                    <!-- Linke Spalte: Kontaktinfo -->
+                    <div class="col-md-3 mb-5 mb-md-0">
+                        <h3 class="h5 fw-bold text-violet mb-4">So erreichen Sie mich:</h3>
+                        <hr class="text-muted">
+                        
+                        <div class="mt-4">
+                            <h4 class="h6 fw-bold">Öffnungszeiten:</h4>
+                            <p class="small">
+                                Mo - Do: 09:00 - 12:00 Uhr<br>
+                                und von 13:00 - 17:00 Uhr<br>
+                                Freitags: 09:00 - 12:30 Uhr
+                            </p>
+                        </div>
+                        
+                        <hr class="text-muted my-4">
+                        
+                        <div>
+                            <h4 class="h6 fw-bold">Telefon:</h4>
+                            <p><a href="tel:0123456789" class="text-decoration-none text-dark">0123 456 789</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Rechte Spalte: Formular -->
+                    <div class="col-md-9">
+                        <form id="contactForm" method="post" action="bat/rd-mailform.php" class="bg-white p-4 shadow-sm rounded">
+                            <input type="hidden" name="form-type" value="contact"/>
+                            
+                            <div class="mb-3">
+                                <label for="name" class="form-label small fw-bold">Ihr Name:</label>
+                                <input type="text" id="name" name="name" class="form-control border-light-subtle bg-light" placeholder="Name eingeben" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label small fw-bold">E-Mail-Adresse:</label>
+                                    <input type="email" id="email" name="email" class="form-control border-light-subtle bg-light" placeholder="beispiel@mail.de" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label small fw-bold">Telefonnummer:</label>
+                                    <input type="text" id="phone" name="phone" class="form-control border-light-subtle bg-light" placeholder="Optional">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message" class="form-label small fw-bold">Ihre Nachricht:</label>
+                                <textarea id="message" name="message" class="form-control border-light-subtle bg-light" rows="5" placeholder="Wie kann ich Ihnen helfen?" required></textarea>
+                            </div>
+
+                            <div class="text-end">
+                                <button class="btn btn-violet px-5 py-2" type="submit">Nachricht senden</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    
+    
+    <!--========================================================
+                            FOOTER
+  =========================================================-->
+   <footer class="py-5 bg-white border-top">
+        <div class="container text-center">
+            <!-- Social Media Icons -->
+            <div class="mb-4">
+                <a href="#" class="text-violet mx-2 fs-4 text-decoration-none"><i class="bi bi-xing"></i></a>
+                <a href="#" class="text-violet mx-2 fs-4 text-decoration-none"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-violet mx-2 fs-4 text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+            </div>
+
+            <!-- Kontaktzeile -->
+            <div class="mb-4 small fw-bold">
+                <span class="d-block d-md-inline mb-2 mb-md-0">Kontakt Büro: +49 (0) 1234 56 798</span>
+                <span class="d-none d-md-inline mx-2">|</span>
+                <span class="d-block d-md-inline mb-2 mb-md-0">Mobil: +49 (0) 170 987 654 32</span>
+                <span class="d-none d-md-inline mx-2">|</span>
+                <span class="d-block d-md-inline">Fax: +49 (0) 7654 32 10</span>
+            </div>
+
+            <!-- Rechtliches & Copyright -->
+            <div class="pt-4 border-top">
+                <a class="btn btn-sm btn-outline-smaragd mb-3" href="index.html">DEINE FIRMA / DEIN UNTERNEHMEN</a>
+                <div class="mb-3">
+                    <a href="agb-impressum.html" class="text-muted text-decoration-none small">AGB / IMPRESSUM</a>
+                    <span class="mx-2 text-muted">-</span>
+                    <a href="datenschutz.html" class="text-muted text-decoration-none small">DATENSCHUTZ</a>
+                </div>
+                <div class="small text-muted">
+                    Copyright © <span id="copyright-year">2025</span> | 
+                    <a href="http://www.souldesign-bodensee.de" class="text-decoration-none text-muted" target="_blank">powered by: SOULDESIGN-BODENSEE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div> <!-- Schließt das Haupt-Wrapper-Div, falls vorhanden -->
+
+<!-- Bootstrap 5.3 JS Bundle  -->
+<script src="https://jsdelivr.net"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<script>
+    // Automatisches Jahr im Footer setzen
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+</script>
+
+
+
+</body>
+</html>

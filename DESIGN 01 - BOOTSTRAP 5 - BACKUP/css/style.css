@@ -1,0 +1,847 @@
+/* Font-Awesome & Google Fonts Integration */
+@import url('https://cloudflare.com');
+@import url('https://googleapis.com');
+
+/*========================================================
+                      Main Styles (Bootstrap 5 Ready)
+=========================================================*/
+
+/* Badge & Links */
+.badge {
+  background: none;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .clearboth {
+    clear: both;
+  }
+}
+
+/* Telefon-Links Styling */
+a[href^="callto:#"] {
+  position: relative;
+  text-decoration: none; /* BS5 Unterstreichung entfernen */
+}
+
+a[href^="callto:#"]:before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  background: #888888;
+  transition: all 0.3s ease;
+}
+
+a[href^="callto:#"]:hover {
+  color: #888888;
+}
+
+a[href^="callto:#"]:hover:before {
+  left: 0;
+  right: 0;
+}
+
+/* Horizontale Linie (Anpassung für Flexbox) */
+hr {
+  width: 39px;
+  border: none;
+  border-bottom: 2px solid #888888;
+  opacity: 1; /* BS5 Fix für Sichtbarkeit */
+  margin: 0; /* Float-Ersatz */
+}
+
+@media (max-width: 767px) {
+  hr {
+    margin: 0 auto; /* Zentrierung auf Mobilgeräten */
+  }
+}
+
+/* Abstände (Beibehalten deiner Maße) */
+.row {
+  margin-top: 30px;
+}
+
+h4 + h2 {
+  margin-top: 23px;
+}
+
+h3 + h4 {
+  margin-top: 14px;
+}
+
+@media (max-width: 767px) {
+  h3 + h4 {
+    text-align: center;
+  }
+}
+
+h4 + hr {
+  margin-top: 25px;
+}
+
+h4 + img {
+  margin-top: 13px;
+}
+
+img + p {
+  margin-top: 4px;
+}
+
+p + .btn {
+  margin-top: 16px;
+}
+
+p + .marked-list {
+  margin-top: 30px;
+}
+
+.mg-add {
+  margin-top: 10px;
+}
+
+/* Mail-Links Styling */
+dl + a[href^="mailto:#"] {
+  display: inline-block;
+  font-weight: 400;
+  margin-top: 28px;
+  color: #333333;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==================  Inline List  ======================*/
+.inline-list {
+  display: flex; /* Flexbox für bessere Ausrichtung */
+  flex-wrap: wrap;
+  justify-content: center; /* Zentrierung wie im Original */
+  width: 100%;
+  background: #333333;
+  color: #DADADA;
+  padding: 21px 0 20px 0;
+  list-style: none; /* BS5 Fix: Punkte entfernen */
+}
+
+.inline-list li {
+  display: inline-block;
+  font-size: 44px;
+  line-height: 44px;
+  color: #fff;
+}
+
+/* Abstand zwischen den Elementen */
+.inline-list li + li {
+  margin-left: 64px;
+}
+
+/* Mobil-Optimierung für große Icons */
+@media (max-width: 767px) {
+  .inline-list li + li {
+    margin-left: 20px;
+  }
+  .inline-list li {
+    font-size: 32px;
+  }
+}
+
+/*==================  Index List   ======================*/
+.index-list {
+  counter-reset: li;
+  list-style: none; /* Punkte entfernen */
+  padding-left: 0;
+}
+
+.index-list li {
+  position: relative;
+  padding-top: 52px;
+}
+
+.index-list li:before {
+  content: counter(li, decimal-leading-zero);
+  counter-increment: li;
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  font-weight: 700;
+  letter-spacing: 2.25px;
+  color: #888888;
+}
+
+@media (max-width: 767px) {
+  .index-list li {
+    text-align: center;
+  }
+  .index-list li:before {
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+
+.index-list .icon + p {
+  margin-top: 17px;
+}
+
+.index-list [class*='fa-'] {
+  font-size: 36px;
+  color: #888888;
+}
+
+@media (max-width: 767px) {
+  .index-list {
+    padding-top: 20px;
+  }
+}
+
+/* Varianten der Index-Liste */
+.index-list__ins1 li {
+  padding-top: 54px;
+}
+
+.index-list__ins1 [class*='fa-'] {
+  display: inline-block;
+  margin-top: -18px;
+}
+
+.index-list__ins1 .icon + p {
+  margin-top: 0px;
+}
+
+@media (max-width: 767px) {
+  .index-list__ins1 {
+    padding-top: 20px;
+    margin-top: 100px;
+  }
+}
+
+.index-list__ins2 li {
+  padding-top: 42px;
+}
+
+.index-list__ins2 h4 + p {
+  margin-top: 15px;
+}
+
+
+
+
+/*==================  Marked List  ======================*/
+.marked-list {
+  list-style: none; /* BS5 Fix: Standardpunkte entfernen */
+  padding-left: 0;
+}
+
+.marked-list li {
+  position: relative;
+  padding-left: 36px;
+}
+
+/* Der farbige Punkt (Bullet) */
+.marked-list li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  margin-top: -4.5px;
+  background: #990066; /* Dein Beeren-Ton / Lila */
+  border-radius: 50%;
+}
+
+.marked-list li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none; /* Unterstreichung standardmäßig aus */
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Die animierte Linie unter dem Link */
+.marked-list li a:before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background: #333333;
+  transition: all 0.3s ease;
+}
+
+.marked-list li a:hover {
+  color: #888888;
+  font-weight: 600;
+}
+
+.marked-list li a:hover:before {
+  right: 0;
+}
+
+.marked-list li + li {
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+/*==================   Verta Box   ======================*/
+/* Modernisiert: Weg von Tabellen-Layout hin zu Flexbox */
+.verta-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 34px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .verta-box {
+    padding-left: 0;
+  }
+}
+
+/*==================     Banner    ======================*/
+.banner-wr {
+  background: transparent;
+}
+
+/* Korrektur für den negativen Margin, damit er in BS5 nicht überlappt */
+.banner-wr .banner:first-child {
+  margin-top: -112px;
+}
+
+.banner-wr__mod {
+  background: #f1f1f1;
+}
+
+.banner {
+  color: #fff;
+  position: relative;
+  background: #333333;
+  z-index: 1;
+  letter-spacing: 2.25px;
+  line-height: 24px;
+}
+
+/* Padding-Korrekturen für BS5 Grid */
+.banner [class*='col-'] {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  box-sizing: border-box;
+}
+
+/* Vertikale Zentrierung in Bannern mit Flexbox statt Absolute Positioning */
+.banner.two-columns .row {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .banner.two-columns .row {
+    display: block; /* Stapeln auf Mobilgeräten */
+  }
+}
+
+.banner [class*='col-']:first-child {
+  padding-left: 33px;
+}
+
+.banner [class*='col-']:last-child {
+  padding-right: 22px;
+}
+
+/* Der dekorative Rahmen (Border-Effekt) */
+.banner:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  padding: 7px;
+  border: 3px solid #333333;
+  /* Clip-Pfad für das Design-Element */
+  clip: rect(auto, auto, 122px, auto);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .banner:before {
+    left: -5px;
+    right: -5px;
+  }
+}
+
+.banner h2 {
+  color: #fff;
+  text-align: left;
+  letter-spacing: 5.2px;
+  font-family: inherit; /* Behält deine Schriftwahl */
+}
+
+.banner h4 a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Die animierte Linie über/unter dem Link */
+.banner h4 a:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.banner h4 a:hover:before {
+  right: 0;
+}
+
+.banner p {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.25px;
+  color: #888888;
+}
+
+@media (max-width: 768px) {
+  .banner h2 {
+    text-align: center;
+  }
+  .banner [class*='col-'] {
+    padding: 26px;
+  }
+}
+
+/* Kontakt-Info Styles innerhalb der Banner */
+.contact-info {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-info dt {
+  color: #fff;
+}
+
+.contact-info dd {
+  color: #888888;
+}
+
+.contact-info dt + dd,
+.contact-info dd + dt {
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+/*==================  Product List  ======================*/
+.product-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-list h4 {
+  color: #333333;
+}
+
+.product-list a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Animierte Linie über dem Link */
+.product-list a:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 100%;
+  height: 1px;
+  background: #333333;
+  transition: all 0.3s ease;
+}
+
+.product-list a:hover:before {
+  right: 0;
+}
+
+.product-list .price {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.25px;
+  color: #888888;
+}
+
+.product-list h4 + img {
+  margin-top: 5px;
+}
+
+.product-list img + .price {
+  margin-top: 8px;
+}
+
+/* Abstände für Grid-Elemente */
+.product-list li:nth-child(n+4) {
+  margin-top: 15px;
+}
+
+@media (max-width: 991px) {
+  .product-list li + li {
+    margin-top: 30px;
+  }
+}
+
+/*==================    Post    ======================*/
+.post {
+  padding-top: 11px;
+}
+
+.post time {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.25px;
+  color: #888888;
+  transition: all 0.3s ease;
+}
+
+/* Bild-Container im Post */
+.post > a {
+  position: relative;
+  display: inline-block;
+  height: auto; /* BS5 Fix für flexible Höhen */
+  max-width: 100%;
+}
+
+.post > a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.post > a:hover:before {
+  opacity: .5;
+}
+
+.post a + time {
+  margin-left: 27px;
+  margin-top: -8px;
+}
+
+@media (max-width: 1199px) and (min-width: 767px) {
+  .post a + time {
+    display: block;
+    margin-top: 6px;
+    margin-left: 0;
+  }
+}
+
+.post a ~ p,
+.post a ~ ul {
+  margin-top: 23px;
+}
+
+.post a:hover + time,
+.post a:hover ~ p,
+.post a:hover ~ ul {
+  color: #333333;
+}
+
+/* Spezial-Effekt für Referenzen (Post2) */
+.post2 a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Der drehende dunkle Hintergrund beim Hover */
+.post2 a:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: 50%;
+  bottom: -50%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all .5s ease;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.post2 a:hover:before {
+  right: -30%;
+  left: -30%;
+}
+
+/* "Read more" Text-Einblendung */
+.post2 a:after {
+  content: "Mehr lesen"; /* Auf Deutsch angepasst */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2.25px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.post2 a:hover:after {
+  opacity: 1;
+}
+
+.post2 a + time {
+  display: block;
+  margin-top: 6px;
+  margin-left: 0;
+}
+
+.post2 time + p {
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+/*========================================================
+                     HEADER Section (Bootstrap 5 Ready)
+=========================================================*/
+header {
+  background: #f1f1f1;
+  border-top: 3px solid #f1f1f1;
+  padding: 0;
+  background-image: url(../images/header-bg.jpg);
+  background-size: cover; /* Sorgt dafür, dass das Hintergrundbild füllt */
+}
+
+/* In BS5 nutzen wir Flexbox statt Floats */
+header .navbar-header {
+  float: none; 
+}
+
+header .nav {
+  float: none;
+}
+
+/* Navbar-Anpassung für die Ausrichtung */
+.navbar-collapse {
+  justify-content: flex-end; /* Schiebt das Menü nach rechts */
+}
+
+@media (max-width: 991px) {
+  header {
+    text-align: center;
+  }
+  header .navbar-header,
+  header .nav {
+    display: block; /* Stapeln auf Mobilgeräten */
+    width: 100%;
+  }
+  header .navbar-header {
+    padding: 14px 0;
+  }
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  header .navbar-header {
+    padding: 8px 0;
+  }
+}
+
+/* Falls du die feste Höhe für den Header-Modus behalten willst */
+header.header__mod {
+  min-height: 131px;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  header.header__mod {
+    min-height: 0;
+  }
+}
+
+/*==================  Term List (Kontakt/Termine)  ======================*/
+.term-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.term-list dd {
+  margin-left: 0;
+  color: #555555;
+}
+
+.term-list * + dt {
+  margin-top: 35px;
+}
+
+.term-list dt + * {
+  margin-top: 20px;
+}
+
+.term-list a[href^="mailto:"] {
+  font-size: 15px;
+  line-height: 24px;
+  display: inline-block;
+  color: #333333;
+  margin-top: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.term-list a[href^="mailto:"]:hover {
+  color: #888888;
+}
+
+* + .term-list {
+  margin-top: 30px;
+}
+
+
+
+
+
+/*========================================================
+                     CONTENT Section
+=========================================================*/
+main {
+  background: #ffffff;
+  display: block; /* BS5 Fix für korrekte Darstellung in allen Browsern */
+}
+
+/*==================    404 Page    =========================*/
+.page404 img {
+  margin-top: 40px;
+  height: auto;
+  max-width: 100%;
+}
+
+.page404 * + p {
+  margin-top: 30px;
+}
+
+@media (max-width: 991px) {
+  .page404 {
+    padding-top: 15px;
+  }
+  .page404 .mg-add2 {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page404 .mg-add2 {
+    margin-top: -80px;
+  }
+}
+
+/*========================================================
+                     FOOTER Styles
+=========================================================*/
+footer {
+  background: #ffffff;
+  text-align: center;
+  padding-bottom: 40px; /* Zusätzlicher Puffer unten */
+}
+
+/* Ersatz für das alte footer .well Styling */
+footer section, 
+footer .footer-content {
+  padding: 65px 0 62px;
+}
+
+footer .brand {
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+footer .copyright {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3.75px;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+footer .brand + .copyright {
+  margin-top: 38px;
+}
+
+/* Mobil-Anpassungen für den Footer */
+@media (max-width: 479px) {
+  footer section,
+  footer .footer-content {
+    padding: 35px 0 32px;
+  }
+  footer .brand {
+    font-size: 24px;
+    letter-spacing: 6px;
+  }
+  footer .copyright {
+    font-size: 12px;
+    letter-spacing: 2.75px;
+  }
+  footer .brand + .copyright {
+    margin-top: 19px;
+  }
+}
+
+/* Hilfsklasse für die 80% Textgröße (falls im Footer genutzt) */
+.achtzig-prozent {
+  font-size: 80%;
+  letter-spacing: 1px;
+}

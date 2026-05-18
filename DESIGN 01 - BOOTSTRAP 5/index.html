@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Spirit Design | Coaching & Naturheilkunde</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap 5.3 (lokal, DSGVO-konform) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -22,7 +23,7 @@
         </a>
         
         <!-- Der Mobile-Button (Hamburger) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Navigation umschalten">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -30,9 +31,9 @@
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#angebot">Angebot</a></li>
+                <li class="nav-item"><a class="nav-link" href="#leistungen">Angebot</a></li>
                 <li class="nav-item"><a class="nav-link" href="#ueber-mich">Über mich</a></li>
-                <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kontakt-section">Kontakt</a></li>
             </ul>
         </div>
     </div>
@@ -44,6 +45,7 @@
 
 
         <!-- Beginn des Sliders -->
+    <div id="home"></div>
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-top: 0px;">
         <div class="carousel-inner">
             
@@ -141,7 +143,7 @@
         
         
         <!-- hier beginnt die Section Unternehmen -->
-        <section class="py-5 bg-white">
+        <section class="py-5 bg-white" id="leistungen">
             <div class="container">
                 <div class="row"> 
                     <!-- Linke Spalte: Titel -->
@@ -504,7 +506,7 @@
         
         
         <!-- Sektion Über mich -->
-        <section class="py-5 bg-white">
+        <section class="py-5 bg-white" id="ueber-mich">
             <div class="container">
                 <div class="row">
                     <!-- Linke Spalte -->
@@ -542,7 +544,7 @@
                                 <p class="mb-2 fw-bold text-smaragd">
                                     Unten ist noch Platz für Kundenstimmen oder weitere Angebote.
                                 </p>
-                                <p class="mb-0 italic">
+                                <p class="mb-0 fst-italic">
                                     Genau so, wie es am Besten zu dir passt...
                                 </p>
                             </div>
@@ -561,7 +563,7 @@
         
         
          <!-- Sektion Kunden & Referenzen -->
-        <section class="py-5" class="section-warm">
+        <section class="py-5 section-warm">
             <div class="container">
                 <div class="row g-4">
                     <!-- Titel-Spalte -->
@@ -677,7 +679,7 @@
 
 
 <!-- Kontakt-Sektion -->
-        <section class="py-5" class="section-warm">
+        <section class="py-5 section-warm" id="kontakt-section">
             <div class="container">
                 <div class="row">
                     <!-- Linke Spalte: Kontaktinfo -->
@@ -772,7 +774,7 @@
                 </div>
                 <div class="small text-muted">
                     Copyright © <span id="copyright-year">2025</span> | 
-                    <a href="http://www.souldesign-bodensee.de" class="text-decoration-none text-muted" target="_blank">powered by: SOULDESIGN-BODENSEE</a>
+                    <a href="https://www.souldesign-bodensee.de" class="text-decoration-none text-muted" target="_blank" rel="noopener noreferrer">powered by: SOULDESIGN-BODENSEE</a>
                 </div>
             </div>
         </div>

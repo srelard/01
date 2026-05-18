@@ -5,64 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Spirit Design | Coaching & Naturheilkunde</title>
 
-    <!-- LOKALE EINBINDUNG (DSGVO-konform & Bootstrap 5) -->
+    <!-- Bootstrap 5.3 (lokal, DSGVO-konform) -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
-
-    
-    <!-- Google Fonts (Optional: Kannst du auch lokal einbinden) -->
-    <link href="https://googleapis.com" rel="stylesheet">
-
-    <style>
-        :root {
-            --spirit-gold: #c5a47e; /* Original Template Gold */
-            --spirit-dark: #333333; /* Original Template Grau */
-            --white: #ffffff;
-        }
-
-        body {
-            background-color: var(--white);
-            color: var(--spirit-dark);
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, .h2, .h4 {
-            color: var(--spirit-dark);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Hilfsklasse für dein Gold */
-        .text-gold { color: var(--spirit-gold) !important; }
-
-        /* Navbar Korrekturen für BS5 */
-        .navbar { background-color: var(--white); padding: 1rem 0; }
-        .nav-link { color: var(--spirit-dark) !important; font-weight: 500; text-transform: uppercase; }
-        .nav-link:hover { color: var(--spirit-gold) !important; }
-
-        /* Slider Fix für Mobilgeräte */
-        .carousel-item img { width: 100%; height: auto; }
-        @media (max-width: 768px) {
-            .carousel-caption {
-                position: relative; left: 0; top: 0; right: 0;
-                padding: 1.5rem; background: #fff; color: #333 !important; text-align: center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <!-- Design-Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-
-    <!--========================================================
-                              HEADER
-    =========================================================-->
-   <body>
 
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
         <!-- Dein Logo-Platzhalter -->
         <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="Logo" height="40"> 
+            <img src="images/logo.png" alt="Logo" height="40">
         </a>
         
         <!-- Der Mobile-Button (Hamburger) -->
@@ -125,7 +81,6 @@
             <span class="visually-hidden">Weiter</span>
         </button>
     </div>
-</header>
 
 
     <!--========================================================
@@ -133,7 +88,7 @@
     =========================================================-->
 
 <main>
-    <section class="py-5" style="margin-top: 50px;"> <!-- Margin verringert, da BS5 effizienter stapelt -->
+    <section class="py-5 section-warm" style="margin-top: 0;"> <!-- Margin verringert, da BS5 effizienter stapelt -->
         <div class="container">
             <div class="row align-items-center"> <!-- Zentriert Inhalte vertikal, falls eine Spalte länger ist -->
                 
@@ -606,7 +561,7 @@
         
         
          <!-- Sektion Kunden & Referenzen -->
-        <section class="py-5" style="background-color: rgba(0,0,0,0.02);">
+        <section class="py-5" class="section-warm">
             <div class="container">
                 <div class="row g-4">
                     <!-- Titel-Spalte -->
@@ -722,7 +677,7 @@
 
 
 <!-- Kontakt-Sektion -->
-        <section class="py-5" style="background-color: rgba(126, 87, 194, 0.03);">
+        <section class="py-5" class="section-warm">
             <div class="container">
                 <div class="row">
                     <!-- Linke Spalte: Kontaktinfo -->
@@ -811,9 +766,9 @@
             <div class="pt-4 border-top">
                 <a class="btn btn-sm btn-outline-smaragd mb-3" href="index.html">DEINE FIRMA / DEIN UNTERNEHMEN</a>
                 <div class="mb-3">
-                    <a href="agb-impressum.html" class="text-muted text-decoration-none small">AGB / IMPRESSUM</a>
+                    <a href="impressum-datenschutz.html#impressum" class="text-muted text-decoration-none small">IMPRESSUM</a>
                     <span class="mx-2 text-muted">-</span>
-                    <a href="datenschutz.html" class="text-muted text-decoration-none small">DATENSCHUTZ</a>
+                    <a href="impressum-datenschutz.html#datenschutz" class="text-muted text-decoration-none small">DATENSCHUTZ</a>
                 </div>
                 <div class="small text-muted">
                     Copyright © <span id="copyright-year">2025</span> | 
@@ -822,23 +777,28 @@
             </div>
         </div>
     </footer>
-</div> <!-- Schließt das Haupt-Wrapper-Div, falls vorhanden -->
+    <!-- Back to Top -->
+    <a href="#" id="toTop" aria-label="Nach oben">
+        <i class="bi bi-chevron-up"></i>
+    </a>
 
-<!-- Bootstrap 5.3 JS Bundle  -->
-<script src="https://jsdelivr.net"></script>
+    <!-- Bootstrap JS (lokal) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Copyright Year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-<script src="js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
-<script>
-    // Automatisches Jahr im Footer setzen
-    document.getElementById('copyright-year').textContent = new Date().getFullYear();
-</script>
-
-
-
+        // Back to Top
+        var toTop = document.getElementById('toTop');
+        if (toTop) {
+            window.addEventListener('scroll', function () {
+                toTop.style.display = window.scrollY > 400 ? 'block' : 'none';
+            });
+            toTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
 </body>
 </html>

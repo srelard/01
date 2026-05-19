@@ -427,6 +427,10 @@ header.header__mod {
 /*========================================================
   8. Kontaktformular (ersetzt RD-Mailform, Vanilla)
 =========================================================*/
+/* Abstand zur Sektions-Oberkante, damit das erste Feld nicht klebt */
+.mailform {
+    margin-top: 40px;
+}
 .mailform label {
     display: block;
     width: 100%;

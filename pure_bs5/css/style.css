@@ -541,11 +541,18 @@ footer {
     color: #C60086;
 }
 
+/* Kontakt-Zeile im dunklen Banner (Original hatte 2 .inline-list-Bloecke
+   gleicher Stilistik, die optisch einen durchgehenden dunklen Streifen
+   bilden). */
 .footer-contact {
+    display: block;
+    width: 100%;
     margin: 0;
-    padding: 25px 0 0;
+    background: #333333;
+    color: #DADADA;
+    padding: 21px 15px 20px;
     font-weight: 700;
-    color: #333333;
+    text-align: center;
 }
 
 footer .well {

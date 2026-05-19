@@ -1,0 +1,478 @@
+/*========================================================
+  DESIGN AMELIE — Template 01 (Bootstrap 5.3)
+  Sauber konvertiert aus spirit-design-01 (Bootstrap 3)
+  Werte 1:1 aus dem Original-CSS uebernommen.
+=========================================================*/
+
+/*========================================================
+  1. Lokale Schriften (DSGVO-konform, kein Google-Fonts-CDN)
+     Open Sans — 400 / 600 / 700
+=========================================================*/
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/open-sans/OpenSans-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/open-sans/OpenSans-SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/open-sans/OpenSans-Bold.woff2') format('woff2');
+}
+
+/*========================================================
+  2. Farbpalette (aus dem Original ausgelesen)
+     Primaer (Lila/Magenta):  #990066   — .h4 / .h3 / .h7 / Listenpunkte
+     Hover-Pink:              #C60086   — Social-Icons
+     Beige-Balken:            #AE9C8C   — .h2 Titel-Balken
+     Beige-Akzent:            #8A6D4F   — .h3-smal-beige
+     Body-Text:               #555555
+     Headings dunkel:         #333333
+     Grau:                    #888888
+     Header-Hintergrund:      #f1f1f1
+     Dunkelbalken (Social):   #333333  / Text #DADADA
+=========================================================*/
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.86666667;
+    color: #555555;
+    background-color: #ffffff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.2s;
+}
+a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: 5.7px;
+    color: #333333;
+}
+
+/* h3-Element: 26px, ls 3.9px */
+h3 {
+    font-size: 26px;
+    line-height: 0.96153846;
+    letter-spacing: 3.9px;
+}
+
+/* h4-Element (ohne Klasse): grau, fett */
+h4 {
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 2.25px;
+    color: #888888;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.86666667;
+    margin: 0;
+}
+
+/* Anker-Versatz bei Sprungmarken (Projekt-Vorgabe) */
+[id] {
+    scroll-margin-top: 100px;
+}
+
+/* Inhalts-Bilder im Original ohne feste Groesse — responsiv halten */
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*========================================================
+  3. Typo-Hilfsklassen (1:1 aus Original)
+=========================================================*/
+/* Beiger Titel-Balken — im Original ueberall als class="h2" genutzt */
+.h2 {
+    display: inline-block;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: normal;
+    background-color: #AE9C8C;
+    letter-spacing: 1px;
+    line-height: 50px;
+    padding-right: 5px;
+    padding-left: 10px;
+    width: auto;
+    text-transform: none;
+}
+
+.h4 {
+    color: #990066;
+    line-height: 30px;
+    font-size: 15px;
+    letter-spacing: 2.25px;
+    font-weight: 700;
+}
+
+.h7 {
+    color: #990066;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2.25px;
+    margin-bottom: 30px;
+}
+
+.h3-smal-beige {
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 3.9px;
+    color: #8A6D4F;
+}
+
+.achtzig-prozent {
+    font-size: 80%;
+}
+
+.bilder {
+    padding-top: 12px;
+}
+
+.mg-add {
+    margin-top: 10px;
+}
+
+hr {
+    display: block;
+    width: 39px;
+    height: 0;
+    margin: 0;
+    border: none;
+    border-bottom: 2px solid #888888;
+    opacity: 1;
+}
+
+/*========================================================
+  4. Marked-List (Punktliste mit Magenta-Bullet)
+=========================================================*/
+.marked-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.marked-list li {
+    position: relative;
+    padding-left: 36px;
+}
+.marked-list li:before {
+    content: "";
+    position: absolute;
+    top: 0.9em;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    margin-top: -4.5px;
+    background: #990066;
+    border-radius: 50%;
+}
+.marked-list li + li {
+    margin-top: 8px;
+}
+
+/*========================================================
+  5. Header / Navigation
+=========================================================*/
+header {
+    background: #f1f1f1;
+    border-top: 3px solid #f1f1f1;
+    padding: 0;
+    background-image: url(../images/header-bg.jpg);
+}
+
+/* Subseiten-Header ohne Slider */
+header.header__mod {
+    min-height: 131px;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.navbar-brand img {
+    display: block;
+}
+
+.navbar .nav-link {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid transparent;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link.active {
+    color: #333333;
+    border-bottom: 3px solid #333333;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    border-color: #e3e3e3;
+}
+.dropdown-item {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #333333;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #f1f1f1;
+    color: #990066;
+}
+
+/*========================================================
+  6. Hero-Slider (BS5 Carousel — ersetzt camera.js)
+=========================================================*/
+#heroCarousel {
+    margin-top: 0;
+}
+#heroCarousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*========================================================
+  7. Content-Sektionen (.well = Original-Abstaende)
+=========================================================*/
+.well {
+    padding-top: 54px;
+    padding-bottom: 25px;
+}
+.well4 {
+    padding-top: 56px;
+    padding-bottom: 96px;
+}
+.well7 {
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+
+/* Referenzen-Beitrag */
+.post2 time {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2.25px;
+    color: #888888;
+}
+.post2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Begriffs-/Rechtstext-Liste (Impressum / Datenschutz) */
+.term-list dd {
+    margin-left: 0;
+    color: #555555;
+}
+.term-list dt {
+    margin-top: 35px;
+}
+.term-list dt.text-primary {
+    color: #990066 !important;
+}
+
+/*========================================================
+  8. Kontaktformular (ersetzt RD-Mailform, Vanilla)
+=========================================================*/
+.mailform label {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.mailform input[type="text"],
+.mailform input[type="email"],
+.mailform input[type="tel"],
+.mailform textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    color: #555555;
+    font-size: 15px;
+}
+.mailform textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+.mailform input:focus,
+.mailform textarea:focus {
+    outline: none;
+    border-color: #990066;
+}
+
+/*========================================================
+  9. Buttons (Original: transparenter Text-Link mit
+     animiertem Unterstrich)
+=========================================================*/
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #888888;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 2.25px;
+    padding: 6px 2px;
+    border-radius: 0;
+    position: relative;
+    transition: 0.3s all ease;
+}
+.btn:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    right: 50%;
+    height: 1px;
+    background: #333333;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    color: #333333;
+}
+.btn:hover:before {
+    left: 0;
+    right: 0;
+}
+
+/*========================================================
+  10. Footer
+=========================================================*/
+footer {
+    background: #ffffff;
+    text-align: center;
+}
+
+/* Dunkelbalken mit Social-Icons (ersetzt .inline-list) */
+.footer-social {
+    display: block;
+    width: 100%;
+    background: #333333;
+    color: #DADADA;
+    padding: 21px 0 20px;
+    margin: 0;
+    list-style: none;
+}
+.footer-social li {
+    display: inline-block;
+}
+.footer-social li + li {
+    margin-left: 64px;
+}
+.footer-social a {
+    font-size: 44px;
+    line-height: 44px;
+    color: #ffffff;
+}
+.footer-social a:hover {
+    color: #C60086;
+}
+
+.footer-contact {
+    margin: 0;
+    padding: 25px 0 0;
+    font-weight: 700;
+    color: #333333;
+}
+
+footer .well {
+    padding: 65px 0 62px;
+}
+
+.copyright {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3.75px;
+    color: #888888;
+}
+.copyright a.btn {
+    color: #888888;
+}
+
+@media (max-width: 479px) {
+    footer .well {
+        padding: 35px 0 32px;
+    }
+    .copyright {
+        font-size: 12px;
+        letter-spacing: 2.75px;
+    }
+}
+
+/*========================================================
+  11. Back-to-Top (ersetzt jquery.ui.totop)
+=========================================================*/
+#toTop {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    background: #888888;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    z-index: 1030;
+    transition: 0.3s;
+}
+#toTop:hover {
+    background: #990066;
+    color: #ffffff;
+}
+
+/*========================================================
+  12. Responsive Feinheiten
+=========================================================*/
+@media (max-width: 991px) {
+    header {
+        text-align: center;
+    }
+}
+@media (max-width: 767px) {
+    hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h3 {
+        text-align: center;
+    }
+}

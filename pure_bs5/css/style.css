@@ -126,9 +126,12 @@ main img {
     text-transform: uppercase;
 }
 
+/* .h4: im Original gewinnt die spaetere Regel `h4, .h4{color:#888888;
+   line-height:1}` ueber das fruehere `.h4{color:#990066;
+   line-height:30px}` (gleiche Spezifitaet) -> effektiv GRAU. */
 .h4 {
-    color: #990066;
-    line-height: 30px;
+    color: #888888;
+    line-height: 1;
     font-size: 15px;
     letter-spacing: 2.25px;
     font-weight: 700;

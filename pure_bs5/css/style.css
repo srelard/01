@@ -426,6 +426,14 @@ header.header__mod {
     width: 100%;
     margin-bottom: 20px;
 }
+/* Honeypot: visuell entfernt, aber im DOM/fuer Bots vorhanden */
+.mailform .hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 .mailform input[type="text"],
 .mailform input[type="email"],
 .mailform input[type="tel"],

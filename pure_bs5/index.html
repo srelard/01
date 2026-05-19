@@ -423,8 +423,14 @@
                         <p>0123 456 789</p>
                     </div>
                     <div class="col-md-9 col-sm-9 col-12">
-                        <form class="mailform" method="post" action="bat/rd-mailform.php">
+                        <form class="mailform" method="post" action="senden.php">
                             <input type="hidden" name="form-type" value="contact">
+                            <!-- Honeypot: fuer Menschen unsichtbar, faengt Bots ab -->
+                            <div class="hp" aria-hidden="true">
+                                <label>Bitte dieses Feld leer lassen
+                                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                                </label>
+                            </div>
                             <fieldset>
                                 <label>
                                     <input type="text" name="name" placeholder="Ihr Name:" required>

@@ -121,7 +121,7 @@ main img {
     padding-right: 5px;
     padding-left: 10px;
     width: auto;
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .h4 {

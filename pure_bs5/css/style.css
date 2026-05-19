@@ -276,14 +276,12 @@ header.header__mod {
     font-weight: 700;
     letter-spacing: 1.5px;
     white-space: nowrap;
-    border-bottom: 3px solid transparent;
 }
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
 .navbar .nav-item.active .nav-link,
 .navbar .nav-link.active {
     color: #333333;
-    border-bottom: 3px solid #333333;
 }
 
 /* Dropdown ohne Caret (Original superfish hatte keinen Pfeil) */
@@ -329,6 +327,17 @@ header.header__mod {
 @media (min-width: 1200px) {
     header .navbar {
         padding-top: 9px;
+    }
+    /* Aktiv-/Hover-Unterstreichung nur auf Desktop (horizontale Navbar);
+       im Mobile-Offcanvas waeren nav-links block-breit -> Strich quer ueber. */
+    .navbar .nav-link {
+        border-bottom: 3px solid transparent;
+    }
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus,
+    .navbar .nav-item.active .nav-link,
+    .navbar .nav-link.active {
+        border-bottom-color: #333333;
     }
     .navbar .navbar-nav .nav-link {
         padding: 26px 4px 42px;

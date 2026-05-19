@@ -153,6 +153,14 @@ main img {
     color: #8A6D4F;
 }
 
+/* Pinke Klein-Ueberschrift (z.B. "So erreichen Sie mich:").
+   Original-letter-spacing:2,5 ist ungueltig -> Browser ignoriert es. */
+.h4-pink-smal {
+    font-size: 18px;
+    line-height: 0.961538;
+    color: #990066;
+}
+
 .achtzig-prozent {
     font-size: 80%;
 }

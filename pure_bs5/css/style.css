@@ -186,6 +186,28 @@ hr {
 }
 
 /*========================================================
+  3b. Nachbar-Abstaende (1:1 aus Original style.css)
+  Erzeugen u.a. die Luecke zwischen <h3>-Titel, leerem
+  <h4> und <hr> in den Spaltenkoepfen.
+=========================================================*/
+* + .row { margin-top: 30px; }
+.row + * { margin-top: 30px; }
+.row + .row { margin-top: 30px; }
+h4 + h2 { margin-top: 23px; }
+h3 + h4 { margin-top: 14px; }
+@media (max-width: 767px) {
+    h3 + h4 { text-align: center; }
+}
+h4 + hr { margin-top: 25px; }
+h4 + img { margin-top: 13px; }
+img + p { margin-top: 4px; }
+p + .btn { margin-top: 16px; }
+p + .marked-list { margin-top: 30px; }
+.marked-list + .btn { margin-top: 16px; }
+dt + dd { margin-top: 16px; }
+dd + dt { margin-top: 28px; }
+
+/*========================================================
   4. Marked-List (Punktliste mit Magenta-Bullet)
 =========================================================*/
 .marked-list {

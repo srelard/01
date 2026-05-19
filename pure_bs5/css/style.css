@@ -154,6 +154,8 @@ main img {
 
 .bilder {
     padding-top: 12px;
+    /* Original hatte nach dem Bild <br><br> im Markup (p line-height 28px) */
+    margin-bottom: 30px;
 }
 
 .mg-add {
@@ -212,10 +214,23 @@ header.header__mod {
     min-height: 131px;
 }
 
+/* Container exakt wie Original-BS3 (max 1170px, kein BS5-xxl-Ausbau) */
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px)  { .container { max-width: 750px; } }
+@media (min-width: 992px)  { .container { max-width: 970px; } }
+@media (min-width: 1200px) { .container { max-width: 1170px; } }
+
 .navbar {
     background: transparent;
 }
 
+.navbar-brand {
+    padding: 15px 0 13px;
+}
 .navbar-brand img {
     display: block;
 }
@@ -225,6 +240,7 @@ header.header__mod {
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 1.5px;
+    white-space: nowrap;
     border-bottom: 3px solid transparent;
 }
 .navbar .nav-link:hover,
@@ -233,6 +249,27 @@ header.header__mod {
 .navbar .nav-link.active {
     color: #333333;
     border-bottom: 3px solid #333333;
+}
+
+/* Dropdown ohne Caret (Original superfish hatte keinen Pfeil) */
+.navbar .dropdown-toggle::after {
+    display: none;
+}
+
+/* Desktop (ab xl): hoher Header + weite Item-Abstaende wie Original
+   Original: .navbar-nav > li > a { padding:26px 4px 42px }
+            .navbar-nav > li + li { margin-left:51px }
+            Logo-Img margin-top:30px */
+@media (min-width: 1200px) {
+    .navbar .navbar-nav .nav-link {
+        padding: 26px 4px 42px;
+    }
+    .navbar .navbar-nav .nav-item + .nav-item {
+        margin-left: 51px;
+    }
+    .navbar-brand img {
+        margin-top: 30px;
+    }
 }
 
 .dropdown-menu {

@@ -1,0 +1,248 @@
+/*========================================================
+  DESIGN AMELIE / Spirit Design — Template 01 (Bootstrap 5.3)
+  Modernisierte Fassung (Basis: angefangene Version der Kundin)
+  Designrichtung 1:1 weitergefuehrt: Montserrat, uppercase,
+  Akzente Violett / Gold / Smaragd.
+=========================================================*/
+
+/*========================================================
+  1. Lokale Schriften (DSGVO-konform, kein Google-Fonts-CDN)
+     Montserrat — 400 / 500 / 700
+=========================================================*/
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/montserrat/Montserrat-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/montserrat/Montserrat-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/montserrat/Montserrat-Bold.woff2') format('woff2');
+}
+
+/*========================================================
+  2. Farbpalette (Akzent-System der Kundin komplettiert)
+     Violett (primaer):  #7e57c2   Buttons, Links, Kontaktboxen
+     Gold (Akzent):      #c5a47e   Hervorhebungen
+     Smaragd (Akzent):   #2f8f7f   Referenz-Namen, Outline-Button
+     Text dunkel:        #333333
+=========================================================*/
+:root {
+    --violet: #7e57c2;
+    --violet-dark: #6a45b0;
+    --violet-soft: rgba(126, 87, 194, 0.06);
+    --gold: #c5a47e;
+    --gold-dark: #b08e63;
+    --smaragd: #2f8f7f;
+    --smaragd-dark: #267567;
+    --dark: #333333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sprungmarken-Versatz unter der Sticky-Navbar */
+[id] {
+    scroll-margin-top: 90px;
+}
+
+/*========================================================
+  3. Akzent-Hilfsklassen (im Markup der Kundin verwendet)
+=========================================================*/
+.text-violet  { color: var(--violet) !important; }
+.text-gold    { color: var(--gold) !important; }
+.text-smaragd { color: var(--smaragd) !important; }
+
+.border-violet  { border-color: var(--violet) !important; }
+.border-smaragd { border-color: var(--smaragd) !important; }
+
+.bg-violet-soft { background-color: var(--violet-soft) !important; }
+
+.btn-violet {
+    background-color: var(--violet);
+    border: 1px solid var(--violet);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.btn-violet:hover,
+.btn-violet:focus {
+    background-color: var(--violet-dark);
+    border-color: var(--violet-dark);
+    color: #fff;
+}
+
+.btn-outline-smaragd {
+    background-color: transparent;
+    border: 1px solid var(--smaragd);
+    color: var(--smaragd);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.btn-outline-smaragd:hover,
+.btn-outline-smaragd:focus {
+    background-color: var(--smaragd);
+    color: #fff;
+}
+
+/*========================================================
+  4. Navigation (weiss, sticky, Hover in Violett)
+=========================================================*/
+.navbar {
+    background-color: var(--white);
+    padding: 0.75rem 0;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+.navbar .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: var(--violet);
+}
+.navbar-brand img {
+    display: block;
+}
+/* Logo unter lg kleiner, damit Brand + Hamburger in eine Zeile passen */
+@media (max-width: 991.98px) {
+    .navbar-brand img {
+        height: 40px;
+        width: auto;
+    }
+}
+
+/* Offcanvas-Flyout (mobil) */
+.offcanvas-header .offcanvas-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark);
+}
+
+/*========================================================
+  5. Hero-Carousel
+=========================================================*/
+#heroCarousel .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .carousel-caption {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 1.5rem;
+        background: #fff;
+        color: var(--dark);
+        text-align: center;
+    }
+}
+
+/*========================================================
+  6. Inhalt
+=========================================================*/
+main img {
+    max-width: 100%;
+    height: auto;
+}
+hr {
+    color: #cccccc;
+}
+
+/* Subseiten-Kopf (Rechtstexte) */
+.page-head {
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+.term-list dt {
+    color: var(--violet);
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 1.75rem;
+    font-weight: 700;
+}
+.term-list dd {
+    margin-left: 0;
+    color: var(--dark);
+}
+
+/*========================================================
+  7. Footer
+=========================================================*/
+footer .social-link {
+    color: var(--violet);
+    font-size: 1.5rem;
+}
+footer .social-link:hover {
+    color: var(--gold);
+}
+
+/*========================================================
+  8. Back-to-Top
+=========================================================*/
+#toTop {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    background: var(--violet);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    z-index: 1030;
+    transition: 0.3s;
+}
+#toTop:hover {
+    background: var(--violet-dark);
+    color: #fff;
+}
+
+/*========================================================
+  9. Kontaktformular (Honeypot unsichtbar)
+=========================================================*/
+.hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

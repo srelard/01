@@ -129,10 +129,13 @@ html {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+/* Navi-Hover in Gold — wie in der Original-Inline-CSS der Kundin
+   (.nav-link:hover { color: var(--spirit-gold) }). Violett bleibt
+   Primaer-Akzent fuer Buttons/CTAs/Boxen. */
 .navbar .nav-link:hover,
 .navbar .nav-link:focus,
 .navbar .nav-link.active {
-    color: var(--violet);
+    color: var(--gold);
 }
 .navbar-brand img {
     display: block;

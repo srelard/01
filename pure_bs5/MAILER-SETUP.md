@@ -25,7 +25,7 @@ Voraussetzung: PHP-Hosting (Standard bei deutschen Anbietern).
   eine Datei `senden.config.local.php` mit denselben `define()`-Zeilen
   und den echten Werten anlegen. Diese Datei wird per `.gitignore`
   ausgeschlossen und von `senden.php` automatisch bevorzugt geladen.
-- Benoetigte Angaben (von Silvia / vom Hoster):
+- Benoetigte Angaben:
   - Empfaenger-Adresse (`MAIL_TO`)
   - Absender-Postfach der Domain (`MAIL_FROM`)
   - SMTP-Host, -Port, -Benutzer, -Passwort
@@ -37,5 +37,5 @@ Voraussetzung: PHP-Hosting (Standard bei deutschen Anbietern).
 - Versandfehler landen im PHP-Error-Log (`error_log`).
 
 ## Hinweis Vorschau / Vercel
-Eine rein statische Vorschau (z. B. Vercel) kann **kein** PHP ausfuehren,
+Die rein statische Vorschau (z. B. Vercel) kann **kein** PHP ausfuehren,
 das Formular ist dort nur Optik. Echter Versand nur auf PHP-Hosting.
